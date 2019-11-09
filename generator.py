@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 from flask import Flask, flash, redirect, render_template, request, session, abort, send_file
 import os
 import os.path
