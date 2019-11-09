@@ -1,1 +1,1 @@
-web: python generator.py
+web: python generator.py runserver 0.0.0.0:5000
