@@ -1,0 +1,22 @@
+{
+  "name": "Random Loot Generator",
+  "description": "A simple website that will generate the folder for you and you can easily just drag and drop into your .minecraft folder and start playing",
+  "image": "heroku/python",
+  "repository": "https://github.com/Linesmerrill/random-loot-generator",
+  "keywords": ["python" ],
+  "addons": [],
+  "env": {
+    "SECRET_KEY": {
+      "description": "The secret key for the Django application.",
+      "generator": "secret"
+    }
+  },
+  "environments": {
+    "test": {
+      "scripts": {
+        "test-setup": "python generator.py collectstatic --noinput",
+        "test": "python generator.py test"
+      }
+    }
+  }
+}
