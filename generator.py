@@ -17,7 +17,7 @@ def index():
 @app.route("/return-files/")
 def return_files():
     try:
-        return send_file("random_loot.zip", attachment_filename="random_loot.zip")
+        return send_file("random_loot.zip", as_attachment=True, attachment_filename="random_loot.zip")
     except Exception as e:
         return str(e)
 
