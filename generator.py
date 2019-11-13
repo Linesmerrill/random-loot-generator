@@ -61,6 +61,11 @@ def generator():
 	
     print('Created datapack "{}"'.format(datapack_filename))
     datapack = "Generated Successfully!"
+
+    try:
+        return send_file("random_loot.zip", as_attachment=True, attachment_filename="random_loot.zip")
+    except Exception as e:
+        return str(e)
     return render_template('generator.html',**locals())
 
 if __name__ == "__main__":
